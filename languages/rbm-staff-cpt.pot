@@ -22,11 +22,15 @@ msgstr ""
 msgid "All Staff"
 msgstr ""
 
-#: rbm-staff-cpt.php:69
-msgctxt "Outdated Dependency Error"
-msgid "To use the %s Plugin, %s must be active as either a Plugin or a Must Use Plugin!"
+#: rbm-staff-cpt.php:70
+msgctxt "Missing Dependency Error"
+msgid "To use the %s Plugin, both %s and %s must be active as either a Plugin or a Must Use Plugin!"
 msgstr ""
 
-#: rbm-staff-cpt.php:69
+#: rbm-staff-cpt.php:70
+msgid "RBM Field Helpers"
+msgstr ""
+
+#: rbm-staff-cpt.php:70
 msgid "RBM Custom Post Types"
 msgstr ""

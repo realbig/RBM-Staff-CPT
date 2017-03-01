@@ -3,7 +3,7 @@
 Plugin Name: RBM Staff CPT
 Plugin URL: https://github.com/realbig/RBM-Staff-CPT
 Description: Staff CPT moved from CPT-onomies
-Version: 0.1.0
+Version: 0.1.1
 Text Domain: rbm-staff-cpt
 Author: Eric Defore
 Author URL: http://realbigmarketing.com
