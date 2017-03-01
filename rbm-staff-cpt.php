@@ -64,13 +64,16 @@ if ( ! class_exists( 'RBM_Staff_CPT' ) ) {
 			$this->setup_constants();
 			$this->load_textdomain();
 			
-			if ( ! class_exists( 'RBM_CPTS' ) ) {
+			if ( ! class_exists( 'RBM_CPTS' ) ||
+			   ! class_exists( 'RBM_FieldHelpers' ) ) {
 				
-				$this->admin_errors[] = sprintf( _x( 'To use the %s Plugin, %s must be active as either a Plugin or a Must Use Plugin!', 'Outdated Dependency Error', RBM_Staff_CPT_ID ), '<strong>' . $this->plugin_data['Name'] . '</strong>', '<a href="//github.com/realbig/rbm-cpts/" target="_blank">' . __( 'RBM Custom Post Types', RBM_Staff_CPT_ID ) . '</a>' );
+				$this->admin_errors[] = sprintf( _x( 'To use the %s Plugin, both %s and %s must be active as either a Plugin or a Must Use Plugin!', 'Missing Dependency Error', RBM_Staff_CPT_ID ), '<strong>' . $this->plugin_data['Name'] . '</strong>', '<a href="//github.com/realbig/rbm-field-helpers/" target="_blank">' . __( 'RBM Field Helpers', RBM_Staff_CPT_ID ) . '</a>', '<a href="//github.com/realbig/rbm-cpts/" target="_blank">' . __( 'RBM Custom Post Types', RBM_Staff_CPT_ID ) . '</a>' );
 				
 				if ( ! has_action( 'admin_notices', array( $this, 'admin_errors' ) ) ) {
 					add_action( 'admin_notices', array( $this, 'admin_errors' ) );
 				}
+				
+				return false;
 				
 			}
 			
